@@ -1,0 +1,32 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.header {
+    height: 200px;
+    background: #eee;
+}
+.container {
+    display: flex;
+    width: 1000px;
+    max-width: 100%;
+    margin: 60px auto;
+    position: relative;
+}
+.sidebar {
+    width: 35%;
+}
+.sidebar-inner {
+    padding: 24px;
+    background: #fff;
+    border: 1px solid #e4e4e4;
+}
+.content {
+    width: 65%;
+    margin-left: 40px;
+}
+.footer {
+    height: 900px;
+    background: #eee;
+}

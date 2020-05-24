@@ -1,0 +1,25 @@
+{
+  "name": "jquery-sticky-sidebar",
+  "version": "1.0.0",
+  "description": "A sticky sidebar plugin for jQuery",
+  "main": "./dist/jquery.sticky-sidebar.min.js",
+  "scripts": {
+    "build": "grunt",
+    "lint": "eslint ."
+  },
+  "author": "Jeremy Stocker",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babelify": "^8.0.0",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "grunt": "^1.0.2",
+    "grunt-browserify": "^5.3.0",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-watch": "^1.1.0"
+  }
+}
