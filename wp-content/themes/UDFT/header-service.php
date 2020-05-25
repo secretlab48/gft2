@@ -50,7 +50,7 @@
                         <div class="top-menu-content-box">
 
                             <div class="top-logo-box left">
-                                <a class="top-logo-link" href="<?php echo site_url(); ?>"><?php echo $gft['logo2']; ?></a>
+                                <span class="top-logo-link"><img src="<?php echo get_stylesheet_directory_uri() . '/img/zsd-logo.png'; ?>"></span>
                             </div>
 
                             <nav class="nav top-nav" role="navigation">

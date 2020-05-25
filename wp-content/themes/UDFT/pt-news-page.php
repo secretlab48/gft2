@@ -40,7 +40,7 @@ $query = new WP_Query( $args );
 $news = $query->posts;
 $count_posts = $query->found_posts;
 
-get_header( 'page' );
+get_header();
 ?>
 
     <main role="main">
