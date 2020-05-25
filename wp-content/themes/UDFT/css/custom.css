@@ -812,9 +812,7 @@ ul.footer-menu li a:first-letter { text-transform : capitalize; }
 
 
 
-@media screen and ( max-width : 1187px ) {
-
-
+@media screen and ( max-width : 1170px ) {
 
 }
 
@@ -859,6 +857,7 @@ ul.footer-menu li a:first-letter { text-transform : capitalize; }
 
     .img-block-box { display : block; }
     .ib-content-bg { width : 100%; }
+    .quoted-text .ib-img-box { height: 620px; background-size: 100% 100%; }
     .quoted-text .ib-img-box .ib-img { top : 0; }
     .quoted-text .ib-img-box .ib-img.ib-img-1 { background-position : 0 -50px; }
     .ib-img-box { height : 480px; }
@@ -936,6 +935,7 @@ ul.footer-menu li a:first-letter { text-transform : capitalize; }
 
     .agency-legend { display : block; }
 
+    .quoted-text .ib-img-box { height: 520px; }
     .quoted-text .ib-img-box .ib-img.ib-img-1 { background-position : -50px -50px; }
 
     .single-service-post .single-service-content-box.has-sidebar { display : block; }
@@ -1016,6 +1016,8 @@ ul.footer-menu li a:first-letter { text-transform : capitalize; }
     .uu-iconed-block-box { display : block; }
 
     .news-item-box { max-width : 360px; }
+
+    .quoted-text .ib-img-box { height: 90vw; }
 
     .cta-content .cta-text { display : block; }
     .cta-content .cta-text:before { margin : 0 auto 20px auto; }
