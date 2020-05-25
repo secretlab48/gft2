@@ -48,7 +48,7 @@
                                 <div class="top-menu-content-box">
 
                                     <div class="top-logo-box left">
-                                        <span class="top-logo-link"><img src="<?php echo get_stylesheet_directory_uri() . '/img/logo-2.jpg'; ?>"></span>
+                                        <span class="top-logo-link"><img src="<?php echo get_stylesheet_directory_uri() . '/img/zsd-logo.png'; ?>"></span>
                                     </div>
 
                                     <nav class="nav top-nav" role="navigation">

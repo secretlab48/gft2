@@ -281,7 +281,7 @@ add_action ( 'wp_head', function( ) {
     $key = 'AIzaSyBJH_df0u-I98JmaAWGZMqWsLMu8EvQL6Q';
 
     $out = '<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJH_df0u-I98JmaAWGZMqWsLMu8EvQL6Q&language=de"></script>';
-    $out = '';
+    $out = '<meta name="robots" content="noindex"><meta name="googlebot" content="noindex">';
 
     echo $out;
 
@@ -711,7 +711,7 @@ function gft_get_logos() {
     $out =
         '<div class="lb-logos-box">
              <div class="lb-img-box"> 
-                 <div class="lb-logo lb-logo-1"> <img src="' . get_stylesheet_directory_uri() . '/img/logo-2.jpg"></div>
+                 <div class="lb-logo lb-logo-1"> <img src="' . get_stylesheet_directory_uri() . '/img/zsd-logo.png"></div>
                  <div class="lb-logo lb-logo-2"><img src="' . get_stylesheet_directory_uri() . '/img/gft-logo-2.svg"></div>                
              </div>    
          </div>';

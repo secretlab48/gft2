@@ -14,7 +14,7 @@
                             <div class="footer-logo-box">
 
                                 <div class="footer-logo-2">
-                                    <?php echo '<img src="' . get_stylesheet_directory_uri() . '/img/logo-2.jpg">'; ?>
+                                    <?php echo '<img src="' . get_stylesheet_directory_uri() . '/img/zsd-logo.png">'; ?>
                                 </div>
 
                                 <div class="footer-logo-1">
