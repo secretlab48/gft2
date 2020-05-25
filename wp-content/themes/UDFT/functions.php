@@ -280,7 +280,8 @@ add_action ( 'wp_head', function( ) {
 
     $key = 'AIzaSyBJH_df0u-I98JmaAWGZMqWsLMu8EvQL6Q';
 
-    $out = '<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJH_df0u-I98JmaAWGZMqWsLMu8EvQL&language=de"></script>';
+    $out = '<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJH_df0u-I98JmaAWGZMqWsLMu8EvQL6Q&language=de"></script>';
+    $out = '';
 
     echo $out;
 
@@ -662,18 +663,18 @@ function gft_get_form_request() {
     foreach ( $admins as $admin ) {
         $recipients[] = $admin->user_email;
     }
-    //$recipients[] = 'info@gft-sicherheit.de';
-    $recipients[] = 'vadim.labets@agilest.org';
+    $recipients[] = 'info@gft-sicherheit.de';
+    //$recipients[] = 'vadim.labets@agilest.org';
 
-    $to = array( 'secretlab48@gmail.com' );
-    $subject =  _x( 'GFT', 'recruit', 'vacancy-response' );
+    $to = array( $emai_data_array['Email'] );
+    $subject =   site_url() . ' -  your request is accepted';
     $body = get_email_header() . get_email_content( array( 'data' => $emai_data_array ) ) . get_email_footer();
     $headers = array();
     //$headers = array( 'Content-Type: text/html; charset=UTF-8', 'From: ' . 'GFT' . ' <' . 'info@gft-sicherheit.de' . '>' );
 
     $result = wp_mail( $to, $subject, $body, $headers );
 
-    //wp_mail( $recipients, site_url() . ' - new Lead', $email_data );
+    $result = wp_mail( $recipients, site_url() . ' - new Lead', $email_data );
 
     echo json_encode( array( 'result' => 1,'content' => 'Ihre Anfrage wird angenommen, wir werden uns innerhalb von 24 Stunden mit Ihnen in Verbindung setzen' ) );
     wp_die();
@@ -710,7 +711,7 @@ function gft_get_logos() {
     $out =
         '<div class="lb-logos-box">
              <div class="lb-img-box"> 
-                 <div class="lb-logo lb-logo-1"> <img src="' . get_stylesheet_directory_uri() . '/img/gft-logo-1.svg"></div>
+                 <div class="lb-logo lb-logo-1"> <img src="' . get_stylesheet_directory_uri() . '/img/logo-2.jpg"></div>
                  <div class="lb-logo lb-logo-2"><img src="' . get_stylesheet_directory_uri() . '/img/gft-logo-2.svg"></div>                
              </div>    
          </div>';

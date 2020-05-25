@@ -140,17 +140,17 @@ function custom_bcn_template_tags( $replacements, $type, $id ) {
 
 
 
-//add_action('phpmailer_init','send_smtp_email');
+add_action('phpmailer_init','send_smtp_email');
 function send_smtp_email( $phpmailer )
 {
     $phpmailer->SMTPDebug = 0;
     $phpmailer->isSMTP();
-    $phpmailer->Host = "smtp.gmail.com";
+    $phpmailer->Host = "smtp.ionos.de";
     $phpmailer->SMTPAuth = true;
-    $phpmailer->Port = "465";
-    $phpmailer->Username = "zhekas361@gmail.com";
-    $phpmailer->Password = "ab124578";
-    $phpmailer->SMTPSecure = "ssl";
+    $phpmailer->Port = "587";
+    $phpmailer->Username = "info@gft-sicherheit.de";
+    $phpmailer->Password = "LmzzWuCQsNgrJjYqpinTPKMWE36TR$2aKiZ";
+    $phpmailer->SMTPSecure = "STARTTLS";
     $phpmailer->CharSet = 'UTF-8';
 
     $phpmailer->isHTML( true );
@@ -165,8 +165,8 @@ function send_smtp_email( $phpmailer )
         )
     );
 
-    $phpmailer->setFrom('zhekas361@gmail.com', 'Booking Mailer');
-    $phpmailer->addReplyTo('zhekas361@gmail.com', 'Information');
+    $phpmailer->setFrom('info@gft-sicherheit.de', 'GFT Mailer');
+    $phpmailer->addReplyTo('info@gft-sicherheit.de', 'GFT Informer');
 
     //$phpmailer->Subject = 'New Lead';
 

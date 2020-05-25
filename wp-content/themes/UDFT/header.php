@@ -48,7 +48,7 @@
                                 <div class="top-menu-content-box">
 
                                     <div class="top-logo-box left">
-                                        <span class="top-logo-link"><?php echo $gft['logo2']; ?></span>
+                                        <span class="top-logo-link"><img src="<?php echo get_stylesheet_directory_uri() . '/img/logo-2.jpg'; ?>"></span>
                                     </div>
 
                                     <nav class="nav top-nav" role="navigation">
