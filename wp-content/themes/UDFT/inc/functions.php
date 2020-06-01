@@ -17,6 +17,11 @@ class True_Walker_Nav_Menu extends Walker_Nav_Menu {
             $title_before = '<span>';
             $title_after = '</span>';
             $classes[] = 'service-menu-item service-id-' . $item->object_id;
+            $args->before = $args->after = '';
+        }
+        if ( isset( $item->object ) && $item->object == 'service_cat' ) {
+            $args->before = '<div class="menu-service-cat-box">';
+            $args->after = '<div class="menu-service-cat-pointer"></div></div>';
         }
         $classes[] = 'menu-item-' . $item->ID;
 
@@ -124,7 +129,7 @@ function custom_bcn_template_tags( $replacements, $type, $id ) {
 
         $replacements['%title%'] = 'news';
         $replacements['%link%'] = get_permalink( 72 );
-        $replacements['%htitle%'] = 'news';
+        $replacements['%htitle%'] = 'News';
         $replacements['%type%'] = 'page' . $current_item;
         $replacements['%ftitle%'] = 'news';
         $replacements['%fhtitle%'] = 'news';
@@ -664,6 +669,16 @@ if ( ! class_exists( 'CT_TAX_META' ) ) {
 
     $CT_TAX_META = new CT_TAX_META();
     $CT_TAX_META->init();
+
+}
+
+
+function has_webp() {
+
+    if( strpos( $_SERVER['HTTP_ACCEPT'], 'image/webp' ) !== false || strpos( $_SERVER['HTTP_USER_AGENT'], ' Chrome/' ) !== false || strpos( $_SERVER['HTTP_USER_AGENT'], 'Chrome-Lighthouse' ) !== false) {
+        return true;
+    }
+    return false;
 
 }
 

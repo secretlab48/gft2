@@ -496,12 +496,14 @@ function kc_addons_init()
         function gft_slider_box( $atts )
         {
 
+            $img_suffix = has_webp() ? '.webp' : '';
+
             $slides = $atts['options'];
             $slides_html = '<div class="gft-slides-container">';
             foreach( $slides as $i => $slide ) {
-                $style = ' style="background:linear-gradient( rgba(35, 55, 108, 0.7), rgba(35, 55, 108, 0.7) ), url(' . wp_get_attachment_url( $slide->image ) . ') no-repeat 50% 50%";';
+                $style = ' style="background:linear-gradient( rgba(35, 55, 108, 0.7), rgba(35, 55, 108, 0.7) ), url(' . wp_get_attachment_url( $slide->image ) . $img_suffix . ') no-repeat 50% 50%";';
                 $slides_html .=
-                    '<div class="gft-slide-item-box" ' . $style . '>
+                    '<div class="gft-slide-item-box has-bg" ' . $style . '>
                          <div class="gft-slide-item">
                              <div lang="de" class="gft-slide-title">' . umlauts( $slide->title ) . '</div>
                              <div class="gft-dots"><div class="gft-dot"></div><div class="gft-dot"></div><div class="gft-dot"></div></div>
@@ -511,10 +513,10 @@ function kc_addons_init()
                      </div>';
             }
             $slides_html .= '</div>';
-            $style = ' style="background-image:url(' . wp_get_attachment_url( $atts['image'] ) . ')";';
+            $style = ' style="background-image:url(' . wp_get_attachment_url( $atts['image'] ) . $img_suffix . ')";';
             $out =
                 '<div class="gft-slide-block">
-                     <div class="gft-slide-text" ' . $style . '><div class="gft-slide-text-content">' . $atts['text'] . '</div></div>
+                     <div class="gft-slide-text has-bg" ' . $style . '><div class="gft-slide-text-content">' . $atts['text'] . '</div></div>
                      <div class="gft-slides">' . $slides_html . '</div>
                 </div>';
 
@@ -679,6 +681,10 @@ function kc_addons_init()
     }
 
 }
+
+
+
+
 
 
 
