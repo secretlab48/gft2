@@ -37,6 +37,8 @@
 
                         </div>
 
+                        <div class="metr"></div>
+
                     </div>
 
                     <div class="header-content-container">

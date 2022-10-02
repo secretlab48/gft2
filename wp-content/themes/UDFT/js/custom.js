@@ -416,14 +416,14 @@ jQuery(document).ready( function( $ ) {
 
     }
 
-    /*if ( $('.map').length > 0 ) {
+    if ( $('.map').length > 0 ) {
         I = setInterval(function () {
             if ((typeof google === 'object' && typeof google.maps === 'object')) {
                 initMap();
                 clearInterval(I);
             }
         }, 100);
-    }*/
+    }
 
 
 
@@ -835,6 +835,9 @@ jQuery(document).ready( function( $ ) {
         else {
             $('.to-top-button').removeClass('visible-button');
         }
+        let maxScroll = $(document).height() - $(window).height();
+        let currentScroll = parseInt( $(window).scrollTop() / maxScroll * 100 );
+        $('.metr').css( { 'width' : currentScroll + '%' } );
     });
 
 
